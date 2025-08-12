@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --font-inter: 'Inter', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+to bottom,
+
+html {
+  background-color: #0a192f; /* Adjust this color to your bg-navy-700 value */
+  height: 100%;
+  width: 100%;
+  font-family: var(--font-inter);
+}
+
+body {
+  color: #94a3b8 ;
+  /* background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb)); */
+    background: #0a192f ;
+
+
+    
+}
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+/* styles.css or global.css */
+.list-item-with-arrow::before {
+    content: "▹";
+    position: absolute;
+    left: 26%;
+    color: #64ffda; /* Ensure that --green is defined in your CSS variables */
+    
+  }
